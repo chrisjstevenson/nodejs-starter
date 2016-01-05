@@ -1,0 +1,43 @@
+//Collection+JSON spec
+{
+  "collection": {
+    "version": "1.0",
+    "href": "URI",
+    "links": [],
+    "items": [
+      {
+        "data": [],
+        "links": []
+      }
+    ],
+    "queries": [],
+    "template": {
+      "data": []
+    },
+    "error": {}
+  }
+}
+
+
+
+
+"items": [{
+  "href": "",
+  "data": [{
+    "name": "description",
+    "value": "this is my first task",
+    "prompt": "Description"
+  }, {
+    "name": "completed",
+    "value": "true",
+    "prompt": "Completed"
+  }, {
+    "name": "dateCreated",
+    "value": "2011-09-01",
+    "prompt": "Date Created"
+  }, {
+    "name": "dateDue",
+    "value": "2011-09-03",
+    "prompt": "Date Due"
+  }]
+//}]
