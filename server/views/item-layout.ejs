@@ -1,0 +1,33 @@
+{
+"collection": {
+"version": "1.0",
+"href": "<%= site %>",
+"items": [
+        {
+            "href": "<%=site%><%=item._id%>",
+            "data": [
+                {
+                    "name": "description",
+                    "value":  "<%=item.description%>",
+                    "prompt": "Description"
+                },
+                {
+                    "name": "completed",
+                    "value": "<%=items.completed%>",
+                    "prompt": "Completed"
+                },
+                {
+                    "name": "dateDue",
+                    "value": "<%=item.dateDue%>",
+                    "prompt": "Date Due"
+                }
+            ]
+        }
+],
+"queries": [],
+"template": {
+"data": []
+},
+"error": {}
+}
+}

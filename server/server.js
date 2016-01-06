@@ -1,4 +1,5 @@
 global.log = require('../config/log');
+global.contentType = 'application/collection+json';
 var Promise = global.Promise = require('bluebird');
 
 var app = Promise.promisifyAll(require('./express'));
