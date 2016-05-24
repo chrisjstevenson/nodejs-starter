@@ -1,0 +1,54 @@
+---
+banner:
+  _include: "/banner/_banner.yml"
+main:
+  header: Product Comparison
+  resultsListing:
+    value:
+      _templates:
+        - tag: "@results"
+          content:
+            _templates:
+              - tag: "#isHeader"
+                content:
+                  spec:
+                    hints: http://bestbuy.com/retail/ux-patterns/fixed/sticky
+                  value:
+                    header: "{{{header}}}"
+                    original:
+                      header: "{{{original.title}}}"
+                      itemImage:
+                        src: "{{{original.image.url}}}"
+                        type: image/jpg
+                        width: "{{{original.image.width}}}"
+                        height: "{{{original.image.height}}}"
+                        alt: Item Image
+                    comparison:
+                      header: "{{{comparison.title}}}"
+                      itemImage:
+                        src: "{{{comparison.image.url}}}"
+                        type: image/jpg
+                        width: "{{{comparison.image.width}}}"
+                        height: "{{{comparison.image.height}}}"
+                        alt: Item Image
+              - tag: "^isHeader"
+                content:
+                  header: "{{{header}}}"
+                  original: "{{{original}}}"
+                  comparison: "{{{comparison}}}"
+  controlsSection:
+    value:
+      header:
+        value: Controls
+        spec:
+          visibility: hidden
+      backToSearchResults:
+        href: urls.searchResults.index
+        title: Back to Search Results
+      startOver:
+        href: urls.index
+        title: Start Over
+    spec:
+      hints: 
+        - http://bestbuy.com/retail/ux-patterns/fixed/bottom
+        - http://bestbuy.com/retail/ux-patterns/control-section

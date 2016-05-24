@@ -1,0 +1,369 @@
+value:
+  banner:
+    value:
+      logo:
+        value:
+          src: /banner/app_logo.svg
+          width: 177
+          height: 48
+        spec:
+          name: logo
+          hints:
+            - image
+            - content
+        name: logo
+      utilities:
+        value:
+          header:
+            value: Utilities
+            spec:
+              visibility: hidden
+              name: header
+              hints:
+                - header
+                - label
+                - text
+            name: header
+          searchLink:
+            value:
+              href: '{{{urls.index}}}'
+              type: application/lynx+json
+              icon:
+                value:
+                  src: '{{{urls.images.search}}}'
+                  type: image/svg+xml
+                  width: 24
+                  height: 24
+                  alt: 'Start Searching'
+                spec:
+                  name: icon
+                  hints:
+                    - image
+                    - content
+                name: icon
+            spec:
+              name: searchLink
+              hints:
+                - link
+            name: searchLink
+        spec:
+          name: utilities
+          hints:
+            - section
+            - container
+          labeledBy: header
+        name: utilities
+    spec:
+      name: banner
+      hints:
+        - header
+        - label
+        - container
+    name: banner
+  main:
+    value:
+      header:
+        value: 'Search Results'
+        spec:
+          name: header
+          hints:
+            - header
+            - label
+            - text
+        name: header
+      requestedProduct:
+        spec:
+          hints:
+            - 'http://bestbuy.com/retail/ux-patterns/fixed/sticky'
+            - complement
+            - section
+            - container
+          name: requestedProduct
+          labeledBy: header
+        value:
+          _templates:
+            -
+              tag: '#requestedProduct'
+              content:
+                header:
+                  value: 'Original Product'
+                  spec:
+                    name: header
+                    hints:
+                      - header
+                      - label
+                      - text
+                  name: header
+                itemImage:
+                  value:
+                    src: '{{{image.url}}}'
+                    type: image/jpg
+                    width: '{{{image.width}}}'
+                    height: '{{{image.height}}}'
+                    alt: 'Item Image'
+                  spec:
+                    name: itemImage
+                    hints:
+                      - image
+                      - content
+                  name: itemImage
+                productInformation:
+                  value:
+                    header:
+                      value: '{{{shortDescription}}}'
+                      spec:
+                        name: header
+                        hints:
+                          - header
+                          - label
+                          - text
+                      name: header
+                    longdescription:
+                      value: '{{{longDescription}}}'
+                      spec:
+                        name: longdescription
+                        hints:
+                          - text
+                      name: longdescription
+                    attributes:
+                      value:
+                        _templates:
+                          -
+                            tag: '@attributes'
+                            content:
+                              value:
+                                -
+                                  value:
+                                    label:
+                                      value: '{{{label}}}'
+                                      spec:
+                                        name: label
+                                        hints:
+                                          - label
+                                          - text
+                                      name: label
+                                    text:
+                                      value: '{{{text}}}'
+                                      spec:
+                                        name: text
+                                        hints:
+                                          - text
+                                      name: text
+                                  spec:
+                                    name: '0'
+                                    hints:
+                                      - container
+                                  name: '0'
+                              spec:
+                                name: attributes
+                                hints:
+                                  - container
+                                  - 'http://bestbuy.com/retail/ux-patterns/attribute-list'
+                              name: attributes
+                      spec:
+                        name: attributes
+                        hints:
+                          - container
+                          - 'http://bestbuy.com/retail/ux-patterns/attribute-list'
+                      name: attributes
+                  spec:
+                    name: productInformation
+                    hints:
+                      - section
+                      - container
+                    labeledBy: header
+                  name: productInformation
+                priceInformation:
+                  value:
+                    header:
+                      value: 'Current Market Value'
+                      spec:
+                        name: header
+                        hints:
+                          - header
+                          - label
+                          - text
+                      name: header
+                    averageCost:
+                      value: $200.00
+                      spec:
+                        name: averageCost
+                        hints:
+                          - text
+                      name: averageCost
+                  spec:
+                    name: priceInformation
+                    hints:
+                      - section
+                      - container
+                    labeledBy: header
+                  name: priceInformation
+        name: requestedProduct
+      matchingProducts:
+        value:
+          header:
+            value: 'Matching Products'
+            spec:
+              name: header
+              hints:
+                - header
+                - label
+                - text
+            name: header
+          resultsListing:
+            value:
+              _templates:
+                -
+                  tag: '@matchingProducts'
+                  content:
+                    value:
+                      href: '{{{urls.comparison}}}'
+                      header:
+                        value: '{{{shortDescription}}}'
+                        spec:
+                          visibility: hidden
+                          name: header
+                          hints:
+                            - header
+                            - label
+                            - text
+                        name: header
+                      itemImage:
+                        value:
+                          src: '{{{image.url}}}'
+                          type: image/jpg
+                          width: '{{{image.width}}}'
+                          height: '{{{image.height}}}'
+                          alt: 'Item Image'
+                        spec:
+                          name: itemImage
+                          hints:
+                            - image
+                            - content
+                        name: itemImage
+                      productInformation:
+                        value:
+                          header:
+                            value: '{{{shortDescription}}}'
+                            spec:
+                              name: header
+                              hints:
+                                - header
+                                - label
+                                - text
+                            name: header
+                          longdescription:
+                            value: '{{{longDescription}}}'
+                            spec:
+                              name: longdescription
+                              hints:
+                                - text
+                            name: longdescription
+                          attributes:
+                            value:
+                              _templates:
+                                -
+                                  tag: '@attributes'
+                                  content:
+                                    value:
+                                      -
+                                        value:
+                                          label:
+                                            value: '{{{label}}}'
+                                            spec:
+                                              name: label
+                                              hints:
+                                                - label
+                                                - text
+                                            name: label
+                                          text:
+                                            value: '{{{text}}}'
+                                            spec:
+                                              name: text
+                                              hints:
+                                                - text
+                                            name: text
+                                        spec:
+                                          name: '0'
+                                          hints:
+                                            - container
+                                        name: '0'
+                                    spec:
+                                      name: attributes
+                                      hints:
+                                        - container
+                                        - 'http://bestbuy.com/retail/ux-patterns/attribute-list'
+                                    name: attributes
+                            spec:
+                              name: attributes
+                              hints:
+                                - container
+                                - 'http://bestbuy.com/retail/ux-patterns/attribute-list'
+                            name: attributes
+                        spec:
+                          name: productInformation
+                          hints:
+                            - section
+                            - container
+                          labeledBy: header
+                        name: productInformation
+                      priceInformation:
+                        value:
+                          header:
+                            value: Price
+                            spec:
+                              name: header
+                              hints:
+                                - header
+                                - label
+                                - text
+                            name: header
+                          price:
+                            value: $500.00
+                            spec:
+                              name: price
+                              hints:
+                                - text
+                            name: price
+                        spec:
+                          name: priceInformation
+                          hints:
+                            - section
+                            - container
+                          labeledBy: header
+                        name: priceInformation
+                      type: application/lynx+json
+                    spec:
+                      name: resultsListing
+                      hints:
+                        - link
+                        - section
+                        - 'http://bestbuy.com/retail/ux-patterns/listing'
+                      labeledBy: header
+                    name: resultsListing
+            spec:
+              name: resultsListing
+              hints:
+                - container
+                - 'http://bestbuy.com/retail/ux-patterns/listing'
+            name: resultsListing
+        spec:
+          name: matchingProducts
+          hints:
+            - section
+            - container
+          labeledBy: header
+        name: matchingProducts
+    spec:
+      name: main
+      hints:
+        - section
+        - container
+      labeledBy: header
+    name: main
+spec:
+  hints:
+    - section
+    - container
+  labeledBy: banner
+realm: 'http://bestbuy.com/retail/like-for-like/search-results/'

@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+
+var caseDir = 'case';
+if (process.argv.length > 2) {
+    caseDir = process.argv[2];
+}
+
+var caseNames = null;
+if (process.argv.length > 3) {
+    caseNames = process.argv.slice(3);
+}
+
+require('./../lib/tc.js').run(caseDir, caseNames, function () {});

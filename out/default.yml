@@ -1,0 +1,247 @@
+value:
+  banner:
+    value:
+      logo:
+        value:
+          src: /banner/app_logo.svg
+          width: 177
+          height: 48
+        spec:
+          name: logo
+          hints:
+            - image
+            - content
+        name: logo
+      utilities:
+        value:
+          header:
+            value: Utilities
+            spec:
+              visibility: hidden
+              name: header
+              hints:
+                - header
+                - label
+                - text
+            name: header
+          searchLink:
+            value:
+              href: '{{{urls.index}}}'
+              type: application/lynx+json
+              icon:
+                value:
+                  src: '{{{urls.images.search}}}'
+                  type: image/svg+xml
+                  width: 24
+                  height: 24
+                  alt: 'Start Searching'
+                spec:
+                  name: icon
+                  hints:
+                    - image
+                    - content
+                name: icon
+            spec:
+              name: searchLink
+              hints:
+                - link
+            name: searchLink
+        spec:
+          name: utilities
+          hints:
+            - section
+            - container
+          labeledBy: header
+        name: utilities
+    spec:
+      name: banner
+      hints:
+        - header
+        - label
+        - container
+    name: banner
+  mainForm:
+    spec:
+      hints:
+        - 'http://bestbuy.com/retail/ux-patterns/section/page'
+        - section
+        - form
+      name: mainForm
+      labeledBy: header
+    value:
+      header:
+        value: 'Search for Like Products'
+        spec:
+          name: header
+          hints:
+            - header
+            - label
+            - text
+        name: header
+      zipCodeSection:
+        value:
+          label:
+            value: 'Zip Code'
+            spec:
+              name: label
+              hints:
+                - header
+                - label
+                - text
+            name: label
+          zipCode:
+            _templates:
+              -
+                tag: '#zipCode'
+                content:
+                  value: '{{{value}}}'
+                  spec:
+                    input: true
+                    labeledBy: label
+                    validation:
+                      required:
+                        state: '{{{requiredState}}}'
+                        invalid: requiredErrorMessage
+                      text:
+                        state: '{{{textState}}}'
+                        invalid: textErrorMessage
+                        pattern: '(.*)'
+                    name: zipCode
+                    hints:
+                      - phrasing
+                      - text
+                  name: zipCode
+            name: zipCode
+          requiredErrorMessage:
+            value: 'Zip Code is required.'
+            spec:
+              name: requiredErrorMessage
+              hints:
+                - text
+            name: requiredErrorMessage
+          textErrorMessage:
+            value: 'Please enter a valid Zip Code.'
+            spec:
+              name: textErrorMessage
+              hints:
+                - text
+            name: textErrorMessage
+        spec:
+          name: zipCodeSection
+          hints:
+            - section
+            - container
+          labeledBy: label
+        name: zipCodeSection
+      skuSection:
+        value:
+          label:
+            value: SKU
+            spec:
+              name: label
+              hints:
+                - header
+                - label
+                - text
+            name: label
+          sku:
+            _templates:
+              -
+                tag: '#sku'
+                content:
+                  value: '{{{value}}}'
+                  spec:
+                    input: true
+                    labeledBy: label
+                    validation:
+                      required:
+                        state: '{{{requiredState}}}'
+                        invalid: requiredErrorMessage
+                      text:
+                        state: '{{{textState}}}'
+                        invalid: textErrorMessage
+                        pattern: '.*'
+                    name: sku
+                    hints:
+                      - phrasing
+                      - text
+                  name: sku
+            name: sku
+          requiredErrorMessage:
+            value: 'Please enter a valid SKU.'
+            spec:
+              name: requiredErrorMessage
+              hints:
+                - text
+            name: requiredErrorMessage
+          textErrorMessage:
+            value: 'Please enter a valid SKU.'
+            spec:
+              name: textErrorMessage
+              hints:
+                - text
+            name: textErrorMessage
+        spec:
+          name: skuSection
+          hints:
+            - section
+            - container
+          labeledBy: label
+        name: skuSection
+      originalPurchasePriceSection:
+        value:
+          label:
+            value: 'Original Purchase Price'
+            spec:
+              name: label
+              hints:
+                - header
+                - label
+                - text
+            name: label
+          originalPurchasePrice:
+            _templates:
+              -
+                tag: '#originalPurchasePrice'
+                content:
+                  value: '55'
+                  spec:
+                    input: true
+                    labeledBy: label
+                    name: originalPurchasePrice
+                    hints:
+                      - phrasing
+                      - text
+                  name: originalPurchasePrice
+            name: originalPurchasePrice
+        spec:
+          name: originalPurchasePriceSection
+          hints:
+            - section
+            - container
+          labeledBy: label
+        name: originalPurchasePriceSection
+      submit:
+        value:
+          title:
+            value: Search
+            spec:
+              name: title
+              hints:
+                - label
+                - text
+            name: title
+          action: '{{{urls.searchResults.index}}}'
+        spec:
+          name: submit
+          hints:
+            - submit
+          labeledBy: title
+        name: submit
+    name: mainForm
+spec:
+  hints:
+    - section
+    - container
+  labeledBy: banner
+realm: 'http://bestbuy.com/retail/like-for-like/'

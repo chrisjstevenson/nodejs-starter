@@ -1,0 +1,10 @@
+sku:
+  value: ""
+  requiredState: "unknown"
+  textState: "unknown"
+zipCode:
+  value: ""
+  requiredState: unknown
+  textState: unknown
+originalPurchasePrice:
+  value: ""

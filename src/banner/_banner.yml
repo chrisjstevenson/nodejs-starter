@@ -1,0 +1,18 @@
+logo:
+  src: /banner/app_logo.svg
+  width: 177
+  height: 48
+utilities:
+  header:
+    value: Utilities
+    spec:
+      visibility: hidden
+  searchLink:
+    href: urls.index
+    type: application/lynx+json
+    icon:
+      src: urls.images.search
+      type: image/svg+xml
+      width: 24
+      height: 24
+      alt: Start Searching

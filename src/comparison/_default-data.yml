@@ -1,0 +1,58 @@
+---
+results:
+  - isHeader: true
+    header: null
+    original:
+      title: Original
+      image: 
+        url: http://placehold.it/100x100
+        height: 73
+        width: 111
+    comparison:
+      title: Comparison
+      image: 
+        url: http://placehold.it/100x100
+        height: 73
+        width: 111
+  - header: Resolution
+    original: 1080i
+    comparison: 1080p
+  - header: Size
+    original: 40\"
+    comparison: 43\"
+  - header: Attribute 3
+    original: Orig 3
+    comparison: Compare 3
+  - header: Attribute 4
+    original: Orig 4
+    comparison: Compare 4
+  - header: Resolution
+    original: 1080i
+    comparison: 1080p
+  - header: Size
+    original: 40\"
+    comparison: 43\"
+  - header: Attribute 3
+    original: Orig 3
+    comparison: Compare 3
+  - header: Attribute 4
+    original: Orig 4
+    comparison: Compare 4
+  - header: Attribute 5
+    original: Orig 5
+    comparison: Compare 5
+  - header: Resolution
+    original: 1080i
+    comparison: 1080p
+  - header: Size
+    original: 40\"
+    comparison: 43\"
+  - header: Attribute 3
+    original: Orig 3
+    comparison: Compare 3
+  - header: Attribute 4
+    original: Orig 4
+    comparison: Compare 4
+  - header: Attribute 5
+    original: Orig 5
+    comparison: Compare 5

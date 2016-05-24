@@ -1,0 +1,88 @@
+---
+banner:
+  _include: "/banner/_banner.yml"
+# form:
+#   screenSizeSection:
+#     label: Screen Size
+#     screenSize:
+#       _templates:
+#         - tag: "#screenSize"
+#           content: 
+#             value: "{{{value}}}"
+#             spec:
+#               input: true
+#               labeledBy: label
+#               validation:
+#                 required:
+#                   state: "{{{requiredState}}}"
+#                   invalid: requiredErrorMessage
+#                 text:
+#                   state: "{{{textState}}}"
+#                   invalid: textErrorMessage
+#                   pattern: "(.*)"
+#                   #format: "$1"
+#     requiredErrorMessage: Screen Size is required.
+#     textErrorMessage: Please enter a valid Screen Size.
+main:
+  header: Search Results
+  requestedProduct:
+    spec:
+      hints:
+        - http://bestbuy.com/retail/ux-patterns/fixed/sticky
+        - complement
+        - section
+    value:  
+      _templates:
+        - tag: "#requestedProduct"
+          content:
+            header: Original Product
+            itemImage:
+              src: "{{{image.url}}}"
+              type: image/jpg
+              width: "{{{image.width}}}"
+              height: "{{{image.height}}}"
+              alt: Item Image
+            productInformation:
+              header: "{{{shortDescription}}}"
+              longdescription: "{{{longDescription}}}"
+              attributes:
+                value:
+                  _templates:
+                    - tag: "@attributes"
+                      content:
+                        - label: "{{{label}}}"
+                          text: "{{{text}}}"
+            priceInformation:
+              header: Current Market Value
+              averageCost: "$200.00"
+  matchingProducts:
+    header: Matching Products
+    resultsListing:
+      value:
+        _templates:
+          - tag: "@matchingProducts"
+            content:
+              href: urls.comparison
+              header:
+                value: "{{{shortDescription}}}"
+                spec:
+                  visibility: hidden
+              itemImage:
+                src: "{{{image.url}}}"
+                type: image/jpg
+                width: "{{{image.width}}}"
+                height: "{{{image.height}}}"
+                alt: Item Image
+              productInformation:
+                header: "{{{shortDescription}}}"
+                longdescription: "{{{longDescription}}}"
+                attributes:
+                  value:
+                    _templates:
+                      - tag: "@attributes"
+                        content:
+                          - label: "{{{label}}}"
+                            text: "{{{text}}}"
+              priceInformation:
+                header: Price
+                price: "$500.00"

@@ -1,0 +1,69 @@
+screenSize:
+  value: ""
+  requiredState: unknown
+  textState: unknown
+requestedProduct:
+  image: 
+    url: http://placehold.it/100x100
+    height: 73
+    width: 111
+  shortDescription: "Product Short Description"
+  longDescription: "Long Description"
+  attributes:
+    - label: Brand
+      text: VIZIO
+    - label: Model Number
+      text: M552I-B2
+    - label: Color
+      text: Black
+    - label: Display Type
+      text: LED
+    - label: Refresh Rate
+      text: 240Hz
+    - label: Number Of HDMI Inputs
+      text: 4
+    - label: Number Of USB Port(s)
+      text: 1
+    - label: Screen Size Class
+      text: 55 inches
+    - label: Vertical Resolution
+      text: 1080p
+    - label: PC Input
+      text: No
+    - label: Number Of DVI Inputs
+      text: 0
+matchingProducts:
+  - &item-template
+    image: 
+      url: http://placehold.it/100x100
+      height: 73
+      width: 111
+    shortDescription: "Product Short Description"
+    longDescription: "Long Description"
+    attributes:
+      - label: Brand
+        text: VIZIO
+      - label: Model Number
+        text: M552I-B2
+      - label: Color
+        text: Black
+      - label: Display Type
+        text: LED
+      - label: Refresh Rate
+        text: 240Hz
+      - label: Number Of HDMI Inputs
+        text: 4
+      - label: Number Of USB Port(s)
+        text: 1
+      - label: Screen Size Class
+        text: 55 inches
+      - label: Vertical Resolution
+        text: 1080p
+      - label: PC Input
+        text: No
+      - label: Number Of DVI Inputs
+        text: 0
+  - *item-template
+  - *item-template
+  - *item-template
+  - *item-template

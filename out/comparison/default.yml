@@ -1,0 +1,276 @@
+value:
+  banner:
+    value:
+      logo:
+        value:
+          src: /banner/app_logo.svg
+          width: 177
+          height: 48
+        spec:
+          name: logo
+          hints:
+            - image
+            - content
+        name: logo
+      utilities:
+        value:
+          header:
+            value: Utilities
+            spec:
+              visibility: hidden
+              name: header
+              hints:
+                - header
+                - label
+                - text
+            name: header
+          searchLink:
+            value:
+              href: '{{{urls.index}}}'
+              type: application/lynx+json
+              icon:
+                value:
+                  src: '{{{urls.images.search}}}'
+                  type: image/svg+xml
+                  width: 24
+                  height: 24
+                  alt: 'Start Searching'
+                spec:
+                  name: icon
+                  hints:
+                    - image
+                    - content
+                name: icon
+            spec:
+              name: searchLink
+              hints:
+                - link
+            name: searchLink
+        spec:
+          name: utilities
+          hints:
+            - section
+            - container
+          labeledBy: header
+        name: utilities
+    spec:
+      name: banner
+      hints:
+        - header
+        - label
+        - container
+    name: banner
+  main:
+    value:
+      header:
+        value: 'Product Comparison'
+        spec:
+          name: header
+          hints:
+            - header
+            - label
+            - text
+        name: header
+      resultsListing:
+        value:
+          _templates:
+            -
+              tag: '@results'
+              content:
+                _templates:
+                  -
+                    tag: '#isHeader'
+                    content:
+                      spec:
+                        hints:
+                          - 'http://bestbuy.com/retail/ux-patterns/fixed/sticky'
+                          - section
+                          - container
+                          - 'http://bestbuy.com/retail/ux-patterns/listing'
+                        name: resultsListing
+                        labeledBy: header
+                      value:
+                        header:
+                          value: '{{{header}}}'
+                          spec:
+                            name: header
+                            hints:
+                              - header
+                              - label
+                              - text
+                          name: header
+                        original:
+                          value:
+                            header:
+                              value: '{{{original.title}}}'
+                              spec:
+                                name: header
+                                hints:
+                                  - header
+                                  - label
+                                  - text
+                              name: header
+                            itemImage:
+                              value:
+                                src: '{{{original.image.url}}}'
+                                type: image/jpg
+                                width: '{{{original.image.width}}}'
+                                height: '{{{original.image.height}}}'
+                                alt: 'Item Image'
+                              spec:
+                                name: itemImage
+                                hints:
+                                  - image
+                                  - content
+                              name: itemImage
+                          spec:
+                            name: original
+                            hints:
+                              - section
+                              - container
+                            labeledBy: header
+                          name: original
+                        comparison:
+                          value:
+                            header:
+                              value: '{{{comparison.title}}}'
+                              spec:
+                                name: header
+                                hints:
+                                  - header
+                                  - label
+                                  - text
+                              name: header
+                            itemImage:
+                              value:
+                                src: '{{{comparison.image.url}}}'
+                                type: image/jpg
+                                width: '{{{comparison.image.width}}}'
+                                height: '{{{comparison.image.height}}}'
+                                alt: 'Item Image'
+                              spec:
+                                name: itemImage
+                                hints:
+                                  - image
+                                  - content
+                              name: itemImage
+                          spec:
+                            name: comparison
+                            hints:
+                              - section
+                              - container
+                            labeledBy: header
+                          name: comparison
+                      name: resultsListing
+                  -
+                    tag: ^isHeader
+                    content:
+                      value:
+                        header:
+                          value: '{{{header}}}'
+                          spec:
+                            name: header
+                            hints:
+                              - header
+                              - label
+                              - text
+                          name: header
+                        original:
+                          value: '{{{original}}}'
+                          spec:
+                            name: original
+                            hints:
+                              - text
+                          name: original
+                        comparison:
+                          value: '{{{comparison}}}'
+                          spec:
+                            name: comparison
+                            hints:
+                              - text
+                          name: comparison
+                      spec:
+                        name: resultsListing
+                        hints:
+                          - section
+                          - container
+                          - 'http://bestbuy.com/retail/ux-patterns/listing'
+                        labeledBy: header
+                      name: resultsListing
+                name: resultsListing
+        spec:
+          name: resultsListing
+          hints:
+            - container
+            - 'http://bestbuy.com/retail/ux-patterns/listing'
+        name: resultsListing
+      controlsSection:
+        value:
+          header:
+            value: Controls
+            spec:
+              visibility: hidden
+              name: header
+              hints:
+                - header
+                - label
+                - text
+            name: header
+          backToSearchResults:
+            value:
+              href: '{{{urls.searchResults.index}}}'
+              title:
+                value: 'Back to Search Results'
+                spec:
+                  name: title
+                  hints:
+                    - label
+                    - text
+                name: title
+              type: application/lynx+json
+            spec:
+              name: backToSearchResults
+              hints:
+                - link
+              labeledBy: title
+            name: backToSearchResults
+          startOver:
+            value:
+              href: '{{{urls.index}}}'
+              title:
+                value: 'Start Over'
+                spec:
+                  name: title
+                  hints:
+                    - label
+                    - text
+                name: title
+              type: application/lynx+json
+            spec:
+              name: startOver
+              hints:
+                - link
+              labeledBy: title
+            name: startOver
+        spec:
+          hints:
+            - 'http://bestbuy.com/retail/ux-patterns/fixed/bottom'
+            - 'http://bestbuy.com/retail/ux-patterns/control-section'
+            - section
+            - container
+          name: controlsSection
+          labeledBy: header
+        name: controlsSection
+    spec:
+      name: main
+      hints:
+        - section
+        - container
+      labeledBy: header
+    name: main
+spec:
+  hints:
+    - section
+    - container
+  labeledBy: banner
+realm: 'http://bestbuy.com/retail/like-for-like/comparison/'

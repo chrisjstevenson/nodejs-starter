@@ -1,0 +1,61 @@
+---
+banner:
+  _include: "/banner/_banner.yml"
+mainForm:
+  spec:
+    hints: http://bestbuy.com/retail/ux-patterns/section/page
+  value:
+    header: Search for Like Products
+    zipCodeSection:
+      label: Zip Code
+      zipCode:
+        _templates:
+          - tag: "#zipCode"
+            content: 
+              value: "{{{value}}}"
+              spec:
+                input: true
+                labeledBy: label
+                validation:
+                  required:
+                    state: "{{{requiredState}}}"
+                    invalid: requiredErrorMessage
+                  text:
+                    state: "{{{textState}}}"
+                    invalid: textErrorMessage
+                    pattern: "(.*)"
+      requiredErrorMessage: Zip Code is required.
+      textErrorMessage: Please enter a valid Zip Code.
+    skuSection:
+      label: SKU
+      sku:
+        _templates:
+          - tag: "#sku"
+            content: 
+              value: "{{{value}}}"
+              spec:
+                input: true
+                labeledBy: label
+                validation:
+                  required:
+                    state: "{{{requiredState}}}"
+                    invalid: requiredErrorMessage
+                  text:
+                    state: "{{{textState}}}"
+                    invalid: textErrorMessage
+                    pattern: ".*"
+      requiredErrorMessage: Please enter a valid SKU.
+      textErrorMessage: Please enter a valid SKU.
+    originalPurchasePriceSection:
+      label: Original Purchase Price
+      originalPurchasePrice:
+        _templates:
+          - tag: "#originalPurchasePrice"
+            content: 
+              value: "55"
+              spec:
+                input: true
+                labeledBy: label
+    submit:
+      title: Search
+      action: urls.searchResults.index
